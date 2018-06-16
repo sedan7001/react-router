@@ -18,21 +18,9 @@
 </div>
 <script type="text/babel">
 
-    // const app = (
-    //     <div>
-    //         <h1>Simple SPA</h1>
-    //         <ul className="header">
-    //             <li>Home</li>
-    //             <li>Stuff</li>
-    //             <li>Contact</li>
-    //         </ul>
-    //         <div className="content">
-    //
-    //         </div>
-    //     </div>
-    // );
 
-    class App extends Component {
+
+    class App extends React.Component {   //React.을 앞에 붚여야 한다.
         render(){
             return (
                 <div>
@@ -50,27 +38,30 @@
         }
     }
 
-    var App = React.createClass({
-        render: function () {
-            return (
-                <div>
-                    <h1>Simple SPA</h1>
-                    <ul className="header">
-                        <li>Home</li>
-                        <li>Stuff</li>
-                        <li>Contact</li>
-                    </ul>
-                    <div className="content">
-
-                    </div>
-                </div>
-            )
-        }
-    });
+    // var App = React.createClass({
+    //     render: function () {
+    //         return (
+    //             <div>
+    //                 <h1>Simple SPA</h1>
+    //                 <ul className="header">
+    //                     <li>Home</li>
+    //                     <li>Stuff</li>
+    //                     <li>Contact</li>
+    //                 </ul>
+    //                 <div className="content">
+    //
+    //                 </div>
+    //             </div>
+    //         )
+    //     }
+    // });
 
     ReactDOM.render(
-        app, document.querySelector("#container")
+        <div>
+            <App></App>
+        </div>, document.querySelector("#container")
     );
+    // div로 감싸지 않았더니 실행이 안되었다.
 </script>
 </body>
 </html>
